@@ -104,6 +104,7 @@ No geral, o projeto mostrou como o pré-processamento e a análise dos dados faz
 * Pandas
 * Scikit-learn
 * XGBoost
+* Random Forest
 
 ---
 
