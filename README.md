@@ -31,8 +31,8 @@ Preparação para modelagem
 
 Foram testados diferentes algoritmos de Machine Learning:
 
-#Random Forest
-#XGBoost
+*Random Forest
+*XGBoost
 
 Ajuste de hiperparâmetros com:
 
