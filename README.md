@@ -3,7 +3,7 @@
 
 Este projeto tem como objetivo identificar transações fraudulentas utilizando técnicas de Machine Learning. A proposta é construir um modelo capaz de detectar fraudes com alta precisão, minimizando falsos positivos e contribuindo para a redução de prejuízos financeiros.
 
- ## Dataset
+## Dataset
 
 Os dados utilizados são provenientes do Kaggle e representam transações financeiras anonimizadas.
 
@@ -17,7 +17,7 @@ Desenvolver um modelo preditivo capaz de:
 Identificar fraudes com alta taxa de detecção (recall)
 Minimizar falsos positivos
 Simular um cenário realista de aplicação
-# Etapas do Projeto
+ Etapas do Projeto
  1. Análise Exploratória (EDA)
 Investigação da distribuição das variáveis
 Análise do desbalanceamento das classes
