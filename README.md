@@ -28,27 +28,27 @@ Padronização e organização dos dados
 Preparação para modelagem
  3. Modelagem
 
-## Foram testados diferentes algoritmos de Machine Learning:
+ Foram testados diferentes algoritmos de Machine Learning:
 
 Random Forest
 XGBoost
 
-## Ajuste de hiperparâmetros com:
+Ajuste de hiperparâmetros com:
 
 RandomizedSearchCV
 
- # Tratamento de desbalanceamento:
+Tratamento de desbalanceamento:
 
 Uso de class_weight
  Avaliação dos Modelos
 
-## As métricas utilizadas foram:
+As métricas utilizadas foram:
 
 Recall (principal foco, devido ao contexto de fraude)
 Precision
 Matriz de confusão
 
-## Melhor modelo: Random Forest
+Melhor modelo: Random Forest
 
 Alta capacidade de detecção de fraudes (~98%)
 Baixo número de erros
@@ -57,7 +57,7 @@ Ausência de falsos positivos (no cenário avaliado)
 Pequenos vazamentos de dados (data leakage) podem inflar artificialmente a performance do modelo
 O tratamento do desbalanceamento é essencial para problemas de fraude
 Modelos mais simples, bem ajustados, podem superar alternativas mais complexas
-## Tecnologias Utilizadas
+Tecnologias Utilizadas
 Python
 Pandas / NumPy
 Scikit-learn
