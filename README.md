@@ -31,46 +31,60 @@ Preparação para modelagem
 
 Foram testados diferentes algoritmos de Machine Learning:
 
-*Random Forest
+- Random Forest
 
-*XGBoost
+- XGBoost
+  
 
 Ajuste de hiperparâmetros com:
 
-#RandomizedSearchCV
+
+- RandomizedSearchCV
+
 
 Tratamento de desbalanceamento:
 
-#Uso de class_weight
+- Uso de class_weight
 
 ## Avaliação dos Modelos
 
 As métricas utilizadas foram:
 
-#Recall (principal foco, devido ao contexto de fraude)
+- Recall (principal foco, devido ao contexto de fraude)
 
-#Precision
+- Precision
 
-#Matriz de confusão
+- Matriz de confusão
+  
 
 # Melhor modelo: Random Forest
 
-#Alta capacidade de detecção de fraudes (~98%)
-#Baixo número de erros
-#Ausência de falsos positivos (no cenário avaliado)
+- Alta capacidade de detecção de fraudes (~98%)
+
+- Baixo número de erros
+
+- Ausência de falsos positivos (no cenário avaliado)
+
 ## Principais Insights
 Pequenos vazamentos de dados (data leakage) podem inflar artificialmente a performance do modelo
 O tratamento do desbalanceamento é essencial para problemas de fraude
 Modelos mais simples, bem ajustados, podem superar alternativas mais complexas
+
 ## Tecnologias Utilizadas
-#Python
-#Pandas / NumPy
-#Scikit-learn
-#XGBoost
-#Matplotlib / Seaborn
+- Python
+
+- Pandas / NumPy
+
+- Scikit-learn
+
+- XGBoost
+
+- Matplotlib / Seaborn
+
+
 ## Estrutura do Projeto
-#notebooks/ → Análise e modelagem
-#data/ → Base de dados
+- notebooks/ → Análise e modelagem
+- data/ → Base de dados
 
 ## Conclusão
 
