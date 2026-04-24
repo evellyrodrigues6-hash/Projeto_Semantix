@@ -1,121 +1,82 @@
-# Projeto de Detecção de Fraude
+ Detecção de Fraudes com Machine Learning
+ Sobre o Projeto
 
-## Sobre
+Este projeto tem como objetivo identificar transações fraudulentas utilizando técnicas de Machine Learning. A proposta é construir um modelo capaz de detectar fraudes com alta precisão, minimizando falsos positivos e contribuindo para a redução de prejuízos financeiros.
 
-Esse projeto tem como objetivo identificar transações fraudulentas usando machine learning. Usei um dataset sintético do Kaggle e passei por todo o fluxo: exploração dos dados, tratamento, modelagem e avaliação.
+ Dataset
 
----
+Os dados utilizados são provenientes do Kaggle e representam transações financeiras anonimizadas.
 
-## Dados e análise
+Contém variáveis numéricas resultantes de transformação (PCA)
+Classe altamente desbalanceada (fraudes são minoria)
+Problema típico de classificação binária (fraude vs não fraude)
+ Objetivo
 
-* Dataset de fraude (Kaggle)
-* Análise exploratória para entender distribuição e padrões
-* Verificação de desbalanceamento entre as classes
-* Ajuste de tipos de dados e padronização de categorias
+Desenvolver um modelo preditivo capaz de:
 
----
+Identificar fraudes com alta taxa de detecção (recall)
+Minimizar falsos positivos
+Simular um cenário realista de aplicação
+ Etapas do Projeto
+ 1. Análise Exploratória (EDA)
+Investigação da distribuição das variáveis
+Análise do desbalanceamento das classes
+Identificação de possíveis inconsistências
+ 2. Tratamento de Dados
+Remoção de variáveis com data leakage (vazamento de informação)
+Padronização e organização dos dados
+Preparação para modelagem
+ 3. Modelagem
 
-## Pré-processamento
+Foram testados diferentes algoritmos de Machine Learning:
 
-Durante a análise, percebi que algumas variáveis estavam influenciando demais o modelo. Para evitar viés e deixar o resultado mais realista, removi:
+Random Forest
+XGBoost
 
-* device_risk_score
-* ip_risk_score
-* country_ng
+ Ajuste de hiperparâmetros com:
 
-Também transformei variáveis categóricas em numéricas e tratei o desbalanceamento usando `class_weight='balanced'`.
+RandomizedSearchCV
 
----
+ Tratamento de desbalanceamento:
 
-## Modelos
+Uso de class_weight
+ Avaliação dos Modelos
 
-Testei dois modelos principais:
+As métricas utilizadas foram:
 
-* Random Forest
-* XGBoost
+Recall (principal foco, devido ao contexto de fraude)
+Precision
+Matriz de confusão
 
-Para melhorar o desempenho, utilizei o **RandomizedSearchCV** para buscar bons hiperparâmetros sem precisar testar todas as combinações.
+ Melhor modelo: Random Forest
 
----
+Alta capacidade de detecção de fraudes (~98%)
+Baixo número de erros
+Ausência de falsos positivos (no cenário avaliado)
+ Principais Insights
+Pequenos vazamentos de dados (data leakage) podem inflar artificialmente a performance do modelo
+O tratamento do desbalanceamento é essencial para problemas de fraude
+Modelos mais simples, bem ajustados, podem superar alternativas mais complexas
+ Tecnologias Utilizadas
+Python
+Pandas / NumPy
+Scikit-learn
+XGBoost
+Matplotlib / Seaborn
+ Estrutura do Projeto
+notebooks/ → Análise e modelagem
+data/ → Base de dados
 
-## Visualização dos Resultados
+ Conclusão
 
-### Comparação dos Modelos
+O projeto demonstrou que é possível construir um modelo eficiente para detecção de fraudes utilizando técnicas de Machine Learning, desde que haja atenção especial à qualidade dos dados e ao tratamento de vieses.
 
-![Comparação dos Modelos](images/random_forest_vs_xgboost.png)
+Além do desempenho do modelo, o principal aprendizado foi a importância da análise crítica dos dados e das decisões tomadas ao longo do processo.
 
-### Desempenho do XGBoost
+ Acesse o Projeto
 
-![XGBoost](images/xgboost_resultados.png)
+👉 <(https://github.com/evellyrodrigues6-hash/Projeto_Semantix/blob/main/Projeto_Semantix.ipynb)>
 
-### Desempenho do Random Forest
+ Contato
 
-![Random Forest](images/random_forest_resultados.png)
-
-### Comparativo Final
-
-![Comparativo Final](images/comparativo_final.png)
-
-### Modelo Final
-
-![Modelo Final](images/modelo_final.png)
-
----
-
-## Resultados
-
-### Random Forest (modelo escolhido)
-
-* Acurácia: 100%
-* Classe 0: 100% em todas as métricas
-* Classe 1 (fraude):
-
-  * Precisão: 100%
-  * Recall: 98%
-  * F1-score: 99%
-* Apenas 2 fraudes não detectadas
-* Nenhum falso positivo
-
-### XGBoost
-
-* Acurácia: 100%
-* Classe 0: 100% em todas as métricas
-* Classe 1 (fraude):
-
-  * Precisão: 98%
-  * Recall: 96%
-  * F1-score: 97%
-
----
-
-## Conclusões
-
-Os dois modelos tiveram um desempenho muito bom, mas o Random Forest se saiu melhor na detecção de fraudes.
-
-Um ponto importante foi perceber que resultados perfeitos podem indicar problema nos dados. Ao remover variáveis que “entregavam” a resposta, o modelo ficou mais confiável.
-
-No geral, o projeto mostrou como o pré-processamento e a análise dos dados fazem muita diferença no resultado final.
-
----
-
-## Tecnologias
-
-* Python
-* Pandas
-* Scikit-learn
-* XGBoost
-* Random Forest
-
----
-
-## Como usar
-
-1. Clone o repositório
-2. Instale as dependências
-3. Execute o notebook principal
-
----
-
-## Contato
-
-Se quiser trocar ideia ou sugerir melhorias, fica à vontade para entrar em contato :)
+Fique à vontade para contribuir ou trocar ideias sobre o projeto! 😊
