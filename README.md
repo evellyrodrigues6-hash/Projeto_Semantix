@@ -10,14 +10,15 @@ Os dados utilizados são provenientes do Kaggle e representam transações finan
 Contém variáveis numéricas resultantes de transformação (PCA)
 Classe altamente desbalanceada (fraudes são minoria)
 Problema típico de classificação binária (fraude vs não fraude)
- Objetivo
+
+## Objetivo
 
 Desenvolver um modelo preditivo capaz de:
 
 Identificar fraudes com alta taxa de detecção (recall)
 Minimizar falsos positivos
 Simular um cenário realista de aplicação
- Etapas do Projeto
+## Etapas do Projeto
  1. Análise Exploratória (EDA)
 Investigação da distribuição das variáveis
 Análise do desbalanceamento das classes
@@ -28,7 +29,7 @@ Padronização e organização dos dados
 Preparação para modelagem
  3. Modelagem
 
- Foram testados diferentes algoritmos de Machine Learning:
+Foram testados diferentes algoritmos de Machine Learning:
 
 Random Forest
 XGBoost
@@ -40,7 +41,7 @@ RandomizedSearchCV
 Tratamento de desbalanceamento:
 
 Uso de class_weight
- Avaliação dos Modelos
+## Avaliação dos Modelos
 
 As métricas utilizadas foram:
 
@@ -53,11 +54,11 @@ Melhor modelo: Random Forest
 Alta capacidade de detecção de fraudes (~98%)
 Baixo número de erros
 Ausência de falsos positivos (no cenário avaliado)
- Principais Insights
+## Principais Insights
 Pequenos vazamentos de dados (data leakage) podem inflar artificialmente a performance do modelo
 O tratamento do desbalanceamento é essencial para problemas de fraude
 Modelos mais simples, bem ajustados, podem superar alternativas mais complexas
-Tecnologias Utilizadas
+## Tecnologias Utilizadas
 Python
 Pandas / NumPy
 Scikit-learn
