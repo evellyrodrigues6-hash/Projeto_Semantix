@@ -32,6 +32,7 @@ Preparação para modelagem
 Foram testados diferentes algoritmos de Machine Learning:
 
 *Random Forest
+
 *XGBoost
 
 Ajuste de hiperparâmetros com:
@@ -47,7 +48,9 @@ Tratamento de desbalanceamento:
 As métricas utilizadas foram:
 
 #Recall (principal foco, devido ao contexto de fraude)
+
 #Precision
+
 #Matriz de confusão
 
 # Melhor modelo: Random Forest
